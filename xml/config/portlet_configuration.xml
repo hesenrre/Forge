@@ -1,0 +1,65 @@
+<?xml version='1.0' ?>  
+<portlet:configurations>
+    <portlet:configuration>
+      <name>Navigation</name>
+      <uri>navigation_portlet.jsp</uri>
+      <desc>Navigation Tree</desc>
+      <align>left</align>
+      <is_enable>true</is_enable>
+    </portlet:configuration>
+    <portlet:configuration>
+      <name>Login</name>
+      <uri>login_portlet.jsp</uri>
+      <desc>Login Form</desc>
+      <align>left</align>
+      <is_enable>true</is_enable>
+    </portlet:configuration>
+    <portlet:configuration>
+      <name>Documentation</name>
+      <uri>doc_portlet.jsp</uri>
+      <desc>Apis and documents</desc>
+      <align>left</align>
+      <is_enable>true</is_enable>
+    </portlet:configuration>
+    <portlet:configuration>
+      <name>Books_and_docs</name>
+      <uri>books_docs_portlet.jsp</uri>
+      <desc>Books and documents</desc>
+      <align>left</align>
+      <is_enable>true</is_enable>
+    </portlet:configuration>
+    <portlet:configuration>
+      <name>Principal_Content</name>
+      <uri>content_portlet.jsp</uri>
+      <desc>Content for principal page</desc>
+      <align>center</align>
+      <is_enable>true</is_enable>
+    </portlet:configuration>
+    <portlet:configuration>
+      <name>Projects</name>
+      <uri>projects_portlet.jsp</uri>
+      <desc>Projects tree</desc>
+      <align>right</align>
+      <is_enable>true</is_enable>
+    </portlet:configuration>
+    <portlet:configuration>
+      <name>News</name>
+      <uri>news_portlet.jsp</uri>
+      <desc>RSS news reader portlet</desc>
+      <align>right</align>
+      <is_enable>true</is_enable>
+    </portlet:configuration>
+    <!-- 
+        Not found portlet default portlet, do not delete 
+        unless you know what you are exactly doing.
+    -->
+    <portlet:configuration>
+      <name>no_portlet</name>
+      <uri>no_portlet.jsp</uri>
+      <desc>Default for not found portlet</desc>
+      <is_enable>true</is_enable>
+    </portlet:configuration>
+    <!--
+        End of not found portlet default portlet.
+    -->
+</portlet:configurations>

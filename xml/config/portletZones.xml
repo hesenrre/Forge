@@ -1,0 +1,36 @@
+<?xml version='1.0' ?>
+
+ <ZoneConfiguration>
+
+    <portlets>
+      <portlet>
+        <desc>p 3</desc>
+        <enabled>true</enabled>
+        <name>p3</name>
+        <uri>p3.jsp</uri>
+      </portlet>
+      <portlet>
+        <desc>p 1</desc>
+        <enabled>true</enabled>
+        <name>p1</name>
+        <uri>p1.jsp</uri>
+      </portlet>
+      <portlet>
+        <desc>p 2</desc>
+        <enabled>true</enabled>
+        <name>p2</name>
+        <uri>p2.jsp</uri>
+      </portlet>
+    </portlets>
+
+    <zones>
+      <zone>
+        <name>zone1</name>
+        <portlets>
+          <portlet>p1</portlet>
+          <portlet>p2</portlet>
+          <portlet>p3</portlet>
+        </portlets>
+      </zone>
+    </zones>
+  </ZoneConfiguration>

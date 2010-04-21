@@ -1,0 +1,13 @@
+<?xml version='1.0' ?>  <UserList>
+    <users>
+      <user>
+        <name>one</name>
+      </user>
+      <user>
+        <name>two</name>
+      </user>
+      <user>
+        <name>three</name>
+      </user>
+    </users>
+  </UserList>

@@ -1,0 +1,144 @@
+package org.lainsoft.forge.view.ajax;
+
+
+import java.io.IOException;
+import javax.servlet.jsp.JspWriter;
+import org.lainsoft.forge.view.form.GenericTag;
+
+
+/**
+ * TagLibrary represeting an input text field tag.
+ *
+ * @jsp.tag  name="submit_to_remote"
+ *           description="Text field tag."
+ */
+public class Submit_remote_tag
+    extends GenericTag{
+    
+    private String value;
+    private String url;
+    private String update;
+    private String success;
+    private String failure;
+    private String complete;
+    
+    /**
+     * @jsp.attribute  required="true"
+     *              rtexprvalue="true"
+     */
+    public String
+    getValue(){
+        return is_empty(value)? "": " value=\""+value+"\"";
+    }
+    
+    public void
+    setValue(String value){
+        this.value=value;
+    }
+
+    /**
+     * @jsp.attribute  required="true"
+     *              rtexprvalue="true"
+     */
+    public String
+    getUrl(){
+        return url;
+    }
+    
+    public void
+    setUrl(String url){
+        this.url=url;     
+    }
+
+    /**
+     * @jsp.attribute  required="true"
+     *              rtexprvalue="true"
+     */
+    public String 
+    getUpdate(){
+        return update;
+    }
+    
+    public void
+    setUpdate(String update){
+        this.update = update;
+    }
+    
+    /**
+     * @jsp.attribute  required="false"
+     *              rtexprvalue="true"
+     */
+    public String
+    getSuccess(){
+        return success;
+    }
+    
+    public void
+    setSuccess(String success){
+        this.success = success;
+    }
+    
+    /**
+     * @jsp.attribute  required="false"
+     *              rtexprvalue="true"
+     */
+    public String
+    getFailure(){
+        return failure;
+    }
+    
+    public void
+    setFailure(String failure){
+        this.failure = failure;
+    }
+
+    /**
+     * @jsp.attribute  required="false"
+     *              rtexprvalue="true"
+     */
+    public String
+    getComplete(){
+        return complete;
+    }
+    
+    public void
+    setComplete(String complete){
+        this.complete = complete;
+    }
+
+    private boolean
+    is_empty(Object o){
+        return o == null ? true : (o instanceof String && o.toString().trim().equals(""));
+    }
+
+
+    private String
+    getScriptModifiers(){
+        return (is_empty(getSuccess()) ? "" : ", onSuccess:"+getSuccess())+
+            (is_empty(getFailure()) ? "" : ", onFailure:"+getFailure())+
+            (is_empty(getComplete()) ? "" : ", complete:"+getComplete());
+    }
+
+    
+    
+    public int
+    doStartTag(){
+        try{
+            JspWriter writer = pageContext.getOut();
+            super.setOnclick(null);
+            writer.println("<input type=\'button\' " + getValue()+" "+
+                           this.getModifiers() +
+                           " onClick=\"new Ajax.Updater('"+getUpdate()+"','"+getUrl()+"',{asynchronous:true, evalScripts:true, parameters:Form.serialize(this.form)"+getScriptModifiers()+"}); return false;\""+
+                           "/>");
+        } catch(IOException ioe){
+            ioe.printStackTrace();
+        }
+        return SKIP_BODY;
+    }
+    
+    public int
+    doEndTag(){
+        return EVAL_PAGE;
+    }
+
+}

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns="http://purl.org/rss/1.0/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+ xmlns:taxo="http://purl.org/rss/1.0/modules/taxonomy/"
+ xmlns:admin="http://webns.net/mvcb/"
+ xmlns:syn="http://purl.org/rss/1.0/modules/syndication/"
+>
+
+<channel rdf:about="http://slashdot.org/">
+<title>Slashdot</title>
+<link>http://slashdot.org/</link>
+<description>News for nerds, stuff that matters</description>
+<dc:language>en-us</dc:language>
+<dc:rights>Copyright 1997-2004, OSDN - Open Source Development Network, Inc.  All Rights Reserved.</dc:rights>
+<dc:date>2004-06-25T21:13:32+00:00</dc:date>
+<dc:publisher>OSDN</dc:publisher>
+<dc:creator>pater@slashdot.org</dc:creator>
+<dc:subject>Technology</dc:subject>
+<syn:updatePeriod>hourly</syn:updatePeriod>
+<syn:updateFrequency>1</syn:updateFrequency>
+<syn:updateBase>1970-01-01T00:00+00:00</syn:updateBase>
+<items>
+ <rdf:Seq>
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=04/06/25/1947217" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=04/06/25/1850201" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=04/06/25/1650232" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=04/06/25/1632252" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=04/06/25/159239" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=04/06/25/1457237" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=04/06/25/1418243" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=04/06/25/142249" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=04/06/25/1320252" />
+  <rdf:li rdf:resource="http://slashdot.org/article.pl?sid=04/06/25/1315254" />
+ </rdf:Seq>
+</items>
+<image rdf:resource="http://images.slashdot.org/topics/topicslashdot.gif" />
+<textinput rdf:resource="http://slashdot.org/search.pl" />
+</channel>
+
+<image rdf:about="http://images.slashdot.org/topics/topicslashdot.gif">
+<title>Slashdot</title>
+<url>http://images.slashdot.org/topics/topicslashdot.gif</url>
+<link>http://slashdot.org/</link>
+</image>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=04/06/25/1947217">
+<title>A Piece-By-Piece Guide to the Most Advanced Bots</title>
+<link>http://slashdot.org/article.pl?sid=04/06/25/1947217</link>
+<description>XopherMV cuts-and-pastes from Wired: "In an article from Wired, 'Consider the progress of just the past 15 years. There are now robots that can get around on ...</description>
+<dc:creator>michael</dc:creator>
+<dc:subject>robotics</dc:subject>
+<dc:date>2004-06-25T20:45:00+00:00</dc:date>
+<slash:department>terminator</slash:department>
+<slash:section>articles</slash:section>
+<slash:comments>61</slash:comments>
+<slash:hitparade>61,58,46,33,12,4,1</slash:hitparade>
+</item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=04/06/25/1850201">
+<title>IEEE Approves 802.11i</title>
+<link>http://slashdot.org/article.pl?sid=04/06/25/1850201</link>
+<description>Dozix007 writes "IEEE has approved a new wireless security protocol dubbed 802.11i, intended to finally provide sufficient security for wireless connections ...</description>
+<dc:creator>michael</dc:creator>
+<dc:subject>wireless</dc:subject>
+<dc:date>2004-06-25T19:49:00+00:00</dc:date>
+<slash:department>my-lock-my-key</slash:department>
+<slash:section>articles</slash:section>
+<slash:comments>167</slash:comments>
+<slash:hitparade>167,149,112,67,28,22,13</slash:hitparade>
+</item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=04/06/25/1650232">
+<title>Impoverish a Spammer Today</title>
+<link>http://slashdot.org/article.pl?sid=04/06/25/1650232</link>
+<description>esj at harvee writes "Recently the Camram project released its latest version of a hybrid sender-pays anti-spam system. The project has proven that sender-pays ...</description>
+<dc:creator>michael</dc:creator>
+<dc:subject>spam</dc:subject>
+<dc:date>2004-06-25T19:00:00+00:00</dc:date>
+<slash:department>lose-money-fast</slash:department>
+<slash:section>developers</slash:section>
+<slash:comments>217</slash:comments>
+<slash:hitparade>217,205,168,111,48,29,20</slash:hitparade>
+</item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=04/06/25/1632252">
+<title>P2P Bits</title>
+<link>http://slashdot.org/article.pl?sid=04/06/25/1632252</link>
+<description>yohaas writes "Two Op-Ed stories today in the NY Times address music sharing. In one Kembrew McLeod says that the lawsuits aren't working and gives some ...</description>
+<dc:creator>michael</dc:creator>
+<dc:subject>internet</dc:subject>
+<dc:date>2004-06-25T18:17:00+00:00</dc:date>
+<slash:department>law-of-the-jungle</slash:department>
+<slash:section>yro</slash:section>
+<slash:comments>227</slash:comments>
+<slash:hitparade>227,218,170,131,50,30,17</slash:hitparade>
+</item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=04/06/25/159239">
+<title>Rocket Hobbyists Get Blown Away by Regulations</title>
+<link>http://slashdot.org/article.pl?sid=04/06/25/159239</link>
+<description>dogfart writes "Amateur rocket hobbyists are bearing the brunt of Federal anti-terror efforts. Cumbersome regulations (which include extensive background ...</description>
+<dc:creator>michael</dc:creator>
+<dc:subject>space</dc:subject>
+<dc:date>2004-06-25T17:35:00+00:00</dc:date>
+<slash:department>62.5-grams-is-all-anyone-should-ever-need</slash:department>
+<slash:section>articles</slash:section>
+<slash:comments>513</slash:comments>
+<slash:hitparade>513,506,372,239,76,41,29</slash:hitparade>
+</item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=04/06/25/1457237">
+<title>PCs Use More Sick Days Than People</title>
+<link>http://slashdot.org/article.pl?sid=04/06/25/1457237</link>
+<description>lunarscape writes "ZDNet is running an article about the 'absentee' rate of PCs in various UK workplaces. According to the article, while the average employee ...</description>
+<dc:creator>michael</dc:creator>
+<dc:subject>bug</dc:subject>
+<dc:date>2004-06-25T16:51:00+00:00</dc:date>
+<slash:department>pcs-need-nyquil-too</slash:department>
+<slash:section>articles</slash:section>
+<slash:comments>252</slash:comments>
+<slash:hitparade>252,249,198,139,57,41,31</slash:hitparade>
+</item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=04/06/25/1418243">
+<title>429,000 Do-Not-Call Complaints</title>
+<link>http://slashdot.org/article.pl?sid=04/06/25/1418243</link>
+<description>The Ghetto Imp writes "Is the do-not-call list working for you? According to CNN Money, there have been over 429,000 complaints filed with the FTC over ...</description>
+<dc:creator>michael</dc:creator>
+<dc:subject>spam</dc:subject>
+<dc:date>2004-06-25T16:12:00+00:00</dc:date>
+<slash:department>check-the-number-and-dial-again</slash:department>
+<slash:section>yro</slash:section>
+<slash:comments>361</slash:comments>
+<slash:hitparade>361,346,282,194,67,47,29</slash:hitparade>
+</item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=04/06/25/142249">
+<title>Indiana Launches Statewide Productivity System</title>
+<link>http://slashdot.org/article.pl?sid=04/06/25/142249</link>
+<description>TaylorJo writes "Lt. Governor of Indiana Kathy Davis today unveiled a new technology program designed to give all Hoosiers free access to a full suite of ...</description>
+<dc:creator>michael</dc:creator>
+<dc:subject>usa</dc:subject>
+<dc:date>2004-06-25T15:32:00+00:00</dc:date>
+<slash:department>lots-of-docs-about-corn</slash:department>
+<slash:section>articles</slash:section>
+<slash:comments>243</slash:comments>
+<slash:hitparade>243,234,181,129,44,28,16</slash:hitparade>
+</item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=04/06/25/1320252">
+<title>How Microsoft Develops Its Software</title>
+<link>http://slashdot.org/article.pl?sid=04/06/25/1320252</link>
+<description>crem_d_genes writes "David Gristwood has a post on his blog that notes '21 Rules of Thumb - How Microsoft Develops Its Software', on which he will elaborate at ...</description>
+<dc:creator>michael</dc:creator>
+<dc:subject>microsoft</dc:subject>
+<dc:date>2004-06-25T14:50:00+00:00</dc:date>
+<slash:department>remember-the-triangle</slash:department>
+<slash:section>developers</slash:section>
+<slash:comments>604</slash:comments>
+<slash:hitparade>604,590,455,314,105,59,35</slash:hitparade>
+</item>
+
+<item rdf:about="http://slashdot.org/article.pl?sid=04/06/25/1315254">
+<title>Fingerprint Scanners Still Easy to Fool</title>
+<link>http://slashdot.org/article.pl?sid=04/06/25/1315254</link>
+<description>Anlan writes "A Swedish student wrote her Master's thesis about current fingerprint technology. After a thorough literature study some live testing took place. ...</description>
+<dc:creator>michael</dc:creator>
+<dc:subject>security</dc:subject>
+<dc:date>2004-06-25T14:11:00+00:00</dc:date>
+<slash:department>mission-possible</slash:department>
+<slash:section>articles</slash:section>
+<slash:comments>337</slash:comments>
+<slash:hitparade>337,328,263,183,71,42,29</slash:hitparade>
+</item>
+
+<textinput rdf:about="http://slashdot.org/search.pl">
+<title>Search Slashdot</title>
+<description>Search Slashdot stories</description>
+<name>query</name>
+<link>http://slashdot.org/search.pl</link>
+</textinput>
+
+</rdf:RDF>

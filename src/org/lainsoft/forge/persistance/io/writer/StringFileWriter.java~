@@ -1,0 +1,14 @@
+import org.lainsoft.forge.persistance.io.writer;
+
+
+
+public class StringFileWriter{
+    
+    private StringFileWriter(){}
+    
+    public static StringFileWriter
+    getInstance(){
+        return new StringFileWriter();
+    }
+
+}

@@ -1,0 +1,108 @@
+/**
+ * Text_Field_Tag.java is part of Forge Project.
+ *
+ * Copyright 2004,2006 LainSoft Foundation, Israel Buitron
+ *
+ * You may distribute under the terms of either the GNU General Public
+ * License or the Artistic License, as specified in the README file.
+ *
+ */
+€ô¨§œôóÂpackage org.lainsoft.forge.view.form;
+
+€ô¨¦œôø­import java.io.IOException;
+€ô¨¦œôø­import javax.servlet.http.HttpServletRequest;
+€ô¨¦œôø­import javax.servlet.jsp.tagext.TagSupport;
+
+/**
+ * TagLibrary represeting an input text field tag.
+ *
+ * @jsp.tag  name€ô¨¡œôöğ="text_field_tag"
+ *           description€ô¨¡œôöğ="Text field tag."
+ */
+€ô¨¦œôùüpublic €ô¨¥œôø¡class Text_Field_Tag €ô¨§œô¦ôextends GenericTextTag {
+
+    /**
+     * <code>maxlength</code> tag attribute.
+     */
+    €ô¨§œôùûprivate String maxlength;
+
+    /**
+     * <code>readonly</code> tag attribute.
+     */
+    €ô¨§œôùûprivate String readonly;
+
+
+    /** 
+     * Sets <code>readonly</code> tag attribute.
+     * @param readonly New <i>readonly</i> attribute value.
+     */
+    €ô¨¦œôùüpublic €ô¨¤œôø¥void setReadonly(String readonly) {
+	boolean ro €ô¨¡œôöğ= (new Boolean(readonly)).booleanValue();
+	this.readonly €ô¨¡œôöğ= !ro ? "" : Boolean.toString(ro);
+    }
+
+    /**
+     * Gets <code>readonly</code> tag attribute.
+     * @€ô¨¦œôöñreturn <code>readonly</code> tag attribute value.
+     * @jsp.attribute  required€ô¨¡œôöğ="false"
+     *              rtexprvalue€ô¨¡œôöğ="true"
+     */
+    €ô¨¦œôùüpublic String getReadonly() {
+o	€ô¨¦œôöñreturn this.readonly;
+    }
+
+
+    /** 
+     * Sets <code>maxlength</code> tag attribute.
+     * @param maxlength New <i>maxlength</i> attribute value.
+     */
+    €ô¨¦œôùüpublic €ô¨¤œôø¥void setMaxlength(String maxlength) {
+	try {
+	    int i €ô¨¡œôöğ= (new Integer(maxlength)).intValue();
+	    this.maxlength €ô¨¡œôöğ= (i€ô¨¢œôù¥>=0 ? Integer.toString(i) : "");
+	} catch(NumberFormatException e) {
+	    this.maxlength €ô¨¡œôöğ= "";
+	}
+    }
+    
+    /**
+     * Gets <code>maxlength</code> tag attribute.
+     * @€ô¨¦œôöñreturn <code>maxlength</code> tag attribute value.
+     * @jsp.attribute  required€ô¨¡œôöğ="false"
+     *              rtexprvalue€ô¨¡œôöğ="true"
+     */
+    €ô¨¦œôùüpublic String getMaxlength() {
+	€ô¨¦œôöñreturn this.maxlength;
+    }
+
+
+
+    /**
+     * Gets all attributes and their values.
+     * If one attribute is not valued (null ore empty) it is not 
+     * included in the list.
+     * @€ô¨¦œôöñreturn <code>String</code> with all valued attributes.
+     */
+    €ô¨¦œôùüpublic String getModifiers() {
+	€ô¨¦œôöñreturn super.getModifiers() +
+	    (isEmpty(readonly)  ? "" : "readonly ") +
+	    (isEmpty(maxlength) ? "" : "maxlength€ô¨¡œôöğ=\'" + maxlength + "\' ");
+    }
+
+
+    €ô¨¦œôùüpublic int doStartTag(){
+        try{
+            render_tag("<input type€ô¨¡œôöğ=\'text\' " + 
+                       this.getModifiers() +
+                       "/>");
+        } catch(IOException ioe){
+            ioe.printStackTrace();
+        }
+        €ô¨¦œôöñreturn SKIP_BODY;
+    }
+
+
+    €ô¨¦œôùüpublic int doEndTag() {
+        €ô¨¦œôöñreturn EVAL_PAGE;
+    }
+}

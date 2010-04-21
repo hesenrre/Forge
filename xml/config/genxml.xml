@@ -1,0 +1,19 @@
+<?xml version='1.0' ?>  
+ <RoutingCommands>
+    <routes>
+      <route>
+        <composite>
+          <command-classname>post_add</command-classname>
+          <command-classname>post_del</command-classname>
+          <command-classname>post_agregate</command-classname>
+          <className>some.Composite</className>
+          <template>master_template</template>
+        </composite>
+        <regexps>
+          <regexp>/some/</regexp>
+          <regexp>/post/</regexp>
+          <regexp>/account/</regexp>
+        </regexps>
+      </route>
+    </routes>
+  </RoutingCommands>

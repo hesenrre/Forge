@@ -1,0 +1,16 @@
+
+
+/**
+ * TagLibrary represeting a html <code>input text</code> field.
+ *
+ * @jsp.tag  name="form_remote_tag"
+ *           body-content="JSP"
+ *           description="Input text tag"
+ */
+public class Listened_text_field
+    extends GenericAjaxTextTag{
+
+
+    
+
+}

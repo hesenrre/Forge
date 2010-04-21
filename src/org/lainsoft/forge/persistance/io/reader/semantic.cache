@@ -1,0 +1,15 @@
+;; Object reader/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "reader/"
+  :tables (list 
+   (semanticdb-table "XMLBeanReader.java"
+    :major-mode 'java-mode
+    :tags '(("org.lainsoft.forge.persistance.io.reader" package nil nil [263 312]) ("java.beans.IntrospectionException" include nil nil [314 355]) ("java.io.Reader" include nil nil [356 378]) ("java.io.File" include nil nil [379 399]) ("java.io.InputStream" include nil nil [400 427]) ("java.io.IOException" include nil nil [428 455]) ("org.apache.commons.betwixt.BindingConfiguration" include nil nil [456 511]) ("org.apache.commons.betwixt.io.BeanReader" include nil nil [512 560]) ("org.xml.sax.SAXException" include nil nil [561 593]) ("XMLBeanReader" type (:typemodifiers ("public") :members (("bconf" variable (:typemodifiers ("private") :type "BindingConfiguration") (reparse-symbol class_member_declaration) [827 862]) ("XMLBeanReader" function (:constructor-flag t :typemodifiers ("private")) (reparse-symbol class_member_declaration) [868 975]) ("getInstance" function (:typemodifiers ("public" "static") :type "XMLBeanReader") (reparse-symbol class_member_declaration) [1121 1210]) ("read" function (:throws ("IntrospectionException" "IOException" "SAXException") :typemodifiers ("public") :arguments (("source" variable (:type "String") (reparse-symbol formal_parameters) [1727 1740]) ("beanClass" variable (:type "Class") (reparse-symbol formal_parameters) [1742 1757])) :type "Object") (reparse-symbol class_member_declaration) [1703 1947]) ("read" function (:throws ("IntrospectionException" "IOException" "SAXException") :typemodifiers ("public") :arguments (("source" variable (:type "File") (reparse-symbol formal_parameters) [2480 2491]) ("beanClass" variable (:type "Class") (reparse-symbol formal_parameters) [2493 2508])) :type "Object") (reparse-symbol class_member_declaration) [2456 2698]) ("read" function (:throws ("IntrospectionException" "IOException" "SAXException") :typemodifiers ("public") :arguments (("source" variable (:type "Reader") (reparse-symbol formal_parameters) [3223 3236]) ("beanClass" variable (:type "Class") (reparse-symbol formal_parameters) [3238 3253])) :type "Object") (reparse-symbol class_member_declaration) [3199 3443]) ("read" function (:throws ("IntrospectionException" "IOException" "SAXException") :typemodifiers ("public") :arguments (("source" variable (:type "InputStream") (reparse-symbol formal_parameters) [3974 3992]) ("beanClass" variable (:type "Class") (reparse-symbol formal_parameters) [3994 4009])) :type "Object") (reparse-symbol class_member_declaration) [3950 4199]) ("prepareBeanReader" function (:throws ("IntrospectionException") :typemodifiers ("private") :arguments (("beanClass" variable (:type "Class") (reparse-symbol formal_parameters) [4540 4555])) :type "BeanReader") (reparse-symbol class_member_declaration) [4498 4821])) :type "class") nil [794 4823]))
+    :file "XMLBeanReader.java"
+    :pointmax 4824
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre3"
+  :semanticdb-version "2.0pre3"
+  )

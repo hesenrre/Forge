@@ -1,0 +1,72 @@
+Lainsoft Forge
+==============
+
+version 0.3 alfa
+2005-mar-03
+
+Preview
+-----------------
+In order to been able to complie and generate the bin jar
+you need to create a "lib" named directory in the project base path
+there you will provide this libs:
+
+
+commons-beanutils  ver >= 1.7
+commons-betwixt    ver >= 0.6
+commons-collection ver >= 3.1
+commons-digister   ver >= 1.6
+commons-logging    ver >= 1.0.4
+xdoclet            ver >= 1.2.2
+servlet-api        ver >= 2.4
+jsp-api            ver >= 2.0
+
+
+Compiling
+-----------------
+
+To compile, generate documentation, and the bin jar you will need
+apache-ant (soon apache-maven), which you can obtain from http://ant.apache.org/, 
+then in the base path of the project just type:
+
+$ ant
+
+In the case you just want to compile the source files just type:
+
+$ ant compile
+
+Generating javadoc:
+
+$ ant docs
+
+Generate web.xml and forge.tld
+
+$ ant webdesc
+
+Create bin jar:
+
+$ ant bin_dist
+
+And finally generate source tar.bzip2 
+
+$ ant src_dist
+
+
+ToDo
+---------------
+There are many things to do, so we enlist it:
+
+- Document the project, this means javadoc mostly, 
+  and content for the project page
+
+- Mavenize the project
+
+- For the next release we need to aggregate the CompositeCommand
+  feature for more details send a mail to hesenrre at gmail dot com 
+  (this is a temporal mail address until we fix our mail server)
+
+- Code the persistance, and interaction modules, for more details
+  send a mail to the address above.
+
+Repository
+---------------
+http://darcs.lainsoftfoundation.org/browse?r=forge;a=summary

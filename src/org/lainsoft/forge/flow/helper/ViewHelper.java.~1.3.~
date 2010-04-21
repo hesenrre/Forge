@@ -1,0 +1,45 @@
+/**
+ * ViewHelper.java is part of Forge Project.
+ *
+ * Copyright 2004,2005 LainSoft Foundation, Demetrio Cruz
+ *
+ * You may distribute under the terms of either the GNU General Public
+ * License or the Artistic License, as specified in the README file.
+ *
+*/
+package org.lainsoft.forge.flow.helper;
+
+import javax.servlet.ServletContext;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+/**
+ * Interface of a helper, defines a wraper for the <code>HttpServletRequest, HttpSession</code>
+ * and <code>ServletContext</code>. It must be an specific implementation for the view interaction.
+ */
+public interface ViewHelper{
+    /**
+     * Obtains the <code>HttpServletRequest</code>.
+     * @return The <code>HttpServletRequest</code> which is wrapped.
+     */
+    public HttpServletRequest getRequest ();
+    
+    public HttpServletResponse getResponse ();
+
+    /**
+     * Obtains the <code>HttpSession</code>.
+     * @return The <code>HttpSession</code> which is wrapped.
+     */
+    public HttpSession getSession ();
+    
+    /**
+     * Obtains the <code>ServletContext</code>.
+     * @return The <code>ServletContext</code> which is wrapped.
+     */
+    public ServletContext getApplicationContext();
+    
+    
+    
+    public String real_path(String seudo_path);
+}

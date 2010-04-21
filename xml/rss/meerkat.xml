@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+<!ENTITY % HTMLlat1 PUBLIC
+ "-//W3C//ENTITIES Latin 1 for XHTML//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml-lat1.ent">
+%HTMLlat1;
+]>
+
+<rdf:RDF 
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+  xmlns="http://purl.org/rss/1.0/"
+> 
+
+  <channel rdf:about="http://meerkat.oreillynet.com/">
+    <title>ONJava.com</title>   
+    <link>http://www.onjava.com/</link>                                 
+    <description>The O'Reilly Network's ONJava.com</description>                 
+    <sy:updatePeriod>hourly</sy:updatePeriod>
+    <sy:updateFrequency>2</sy:updateFrequency>
+    <sy:updateBase>2000-01-01T12:00+00:00</sy:updateBase>
+
+    <image rdf:resource="http://meerkat.oreillynet.com/icons/meerkat-powered.jpg" />
+
+    <items>
+      <rdf:Seq>
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/06/23/hibernate.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/06/23/mdbjca.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/06/23/cachedrowset.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/06/16/dbcancel.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/06/16/ccunittest.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/excerpt/eclipse_chapter2/index1.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/06/09/jsf.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/06/09/sms.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/excerpt/eclipse_chapter2/index.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/06/02/desktop.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/06/02/anttask.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/06/02/cg-vel-2.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/05/26/sss.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/2004/05/26/forrest.html" />
+        <rdf:li rdf:resource="http://www.onjava.com/pub/a/onjava/excerpt/HardcoreJava_chap06/index2.html" />
+      </rdf:Seq>
+    </items>
+  
+    <textinput rdf:resource="http://meerkat.oreillynet.com/" />
+
+  </channel>
+
+  <image rdf:about="http://meerkat.oreillynet.com/icons/meerkat-powered.jpg">
+    <title>Meerkat Powered!</title>
+    <url>http://meerkat.oreillynet.com/icons/meerkat-powered.jpg</url>
+    <link>http://meerkat.oreillynet.com</link>
+  </image>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/06/23/hibernate.html">
+    <title>Working with Hibernate in Eclipse</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/06/23/hibernate.html</link>
+    <description>
+    Jim Elliott was curious about whether anyone had written plugins to work with Hibernate in Eclispe, as he'd just finished writing Hibernate: The Developer's Notebook. It turns out there are several such efforts underway. In this article, Jim explores Hibernate Synchronizer--a plugin that automatically updates your Java code when you change your mapping document.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>James Elliott</dc:creator>
+    <dc:subject>Java</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-23</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/06/23/mdbjca.html">
+    <title>Using a JMS Provider with MDBs via the J2EE Connector Architecture</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/06/23/mdbjca.html</link>
+    <description>
+    Message-Driven Beans (MDBs) get a big boost in J2EE 1.4 via integration with the J2EE Connector Architecture (JCA), which opens up interesting possibilities to use messaging to and from legacy systems. Debu Panda shows how this can be accomplished.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Debu Panda</dc:creator>
+    <dc:subject>Java, Java 2EE (Enterprise)</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-23</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/06/23/cachedrowset.html">
+    <title>Using CachedRowSet to Transfer JDBC Query Results Between Classes</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/06/23/cachedrowset.html</link>
+    <description>
+    JDBC developers have always needed to keep a database connection open while pulling query results. But with the CachedRowSet in J2SE 1.5, it's now possible to disconnect and then get results. Sean Eidmiller shows the advantages of this approach.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Sean Eidemiller</dc:creator>
+    <dc:subject>Java, JDO/JDBC/SQLJ</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-23</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/06/16/dbcancel.html">
+    <title>Interruptible Database Queries</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/06/16/dbcancel.html</link>
+    <description>
+    Perceived performance isn't just about speed; it's also about responsiveness. And few things frustrate a user like an application that ignores user input because it's off doing something else. Slav Boleslawski introduces threading techniques to keep database queries and result retrieval from locking up an application.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Slav Boleslawski</dc:creator>
+    <dc:subject>Java, JDO/JDBC/SQLJ</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-16</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/06/16/ccunittest.html">
+    <title>Code Improvement Through Cyclomatic Complexity</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/06/16/ccunittest.html</link>
+    <description>
+    Overly complex code is dangerous, hard to maintain if not already buggy. But what do we mean by &amp;quot;complex&amp;quot;? The metric of cyclomatic complexity helps show where the most complex code is. As Andrew Glover illustrates, finding the complex code is also the first step to refactoring it.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Andrew Glover</dc:creator>
+    <dc:subject>Java, Best Practices</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-16</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/excerpt/eclipse_chapter2/index1.html">
+    <title>Java Development on Eclipse, Part 2</title>
+    <link>http://www.onjava.com/pub/a/onjava/excerpt/eclipse_chapter2/index1.html</link>
+    <description>
+    In this conclusion of a two-part series of excerpts from Eclipse, author Steve Holzner provides still more examples of how Eclipse makes it easier to create Java code from scratch. This week he covers creating Javadocs, refactoring, adding certain skills to your Eclipse toolbox, and customizing the development environment.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Steve Holzner</dc:creator>
+    <dc:subject>Java</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-16</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/06/09/jsf.html">
+    <title>Improving JSF by Dumping JSP</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/06/09/jsf.html</link>
+    <description>
+    JSF is a great technology for complex web application interfaces. But Hans Bergsten urges you not to give up on JSF just because the JSP layer is flawed; using a custom ViewHandler resolves all of the issues.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Hans Bergsten</dc:creator>
+    <dc:subject>Java</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-09</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/06/09/sms.html">
+    <title>SMS-Powered Applications</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/06/09/sms.html</link>
+    <description>
+    SMS (short message service) is ubiquitous in the small device space, and offers a means of sending and receiving messages from even the simplest mobile phone. Dejan Bosanac looks at how Java can be made to work with SMS.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Dejan Bosanac</dc:creator>
+    <dc:subject>Java</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-09</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/excerpt/eclipse_chapter2/index.html">
+    <title>Java Development on Eclipse, Part 1</title>
+    <link>http://www.onjava.com/pub/a/onjava/excerpt/eclipse_chapter2/index.html</link>
+    <description>
+    Steve Holzner contends that Eclipse makes it easier to create Java code from scratch. In this excerpt from Chapter 2 of his book, Eclipse, Steve shows how Eclipse makes it easy to create new methods, classes, and packages, as well as how to build and run the code.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Steve Holzner</dc:creator>
+    <dc:subject>Java</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-09</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/06/02/desktop.html">
+    <title>Data Models for Desktop Apps</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/06/02/desktop.html</link>
+    <description>
+    Andrei Cioroianu shows how to develop data models for Java desktop applications and how JavaBeans and the Model-View-Controller (MVC) pattern can make your code more maintainable and reusable.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Andrei Cioroianu</dc:creator>
+    <dc:subject>Java, Java 2SE (Standard)</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-02</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/06/02/anttask.html">
+    <title>Writing Ant Tasks</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/06/02/anttask.html</link>
+    <description>
+    Among the many reasons the Java community loves Ant is its flexibility: adding new capabilities to Ant just requires writing a small amount of custom Java code. Michael Fitzgerald shows how Ant can be extended to provide handy XML validation.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Michael Fitzgerald</dc:creator>
+    <dc:subject>Java, Java and XML, Java IDE Tools</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-02</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/06/02/cg-vel-2.html">
+    <title>Template-Based Code Generation with Apache Velocity, Part 2</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/06/02/cg-vel-2.html</link>
+    <description>
+    Giuseppe Naccarato's investigation of code generation continues with a look at using a language-agnostic model to represent the relationships of classes, attributes, and operations in the code to be generated. Does it work better than something platform-specific? The answer is surprising.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Giuseppe Naccarato</dc:creator>
+    <dc:subject>Java, Java 2SE (Standard)</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-06-02</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/05/26/sss.html">
+    <title>SSS (Small, Simple, Safe)</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/05/26/sss.html</link>
+    <description>
+    Teaching Java is complicated both by the language's syntax and the huge number of classes in its standard libraries. According to Alper Coskun, one solution might be &amp;quot;Small Simple Safe&amp;quot; (SSS), which tries to alleviate this by giving the user an opportunity to create and relate objects in a very simple GUI.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Alper Coskun</dc:creator>
+    <dc:subject>Java, Java 2SE (Standard)</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-05-26</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/2004/05/26/forrest.html">
+    <title>Documenting Projects with Apache Forrest</title>
+    <link>http://www.onjava.com/pub/a/onjava/2004/05/26/forrest.html</link>
+    <description>
+    Apache Forrest helps you develop the documentation to accompany your application, automatically providing a number of neat features such as menus, links, cross-references, and breadcrumb navigation. Kyle Downey provides an introduction.
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Kyle Downey</dc:creator>
+    <dc:subject>Java, Java and XML, Open Source Java</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-05-26</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+  <item rdf:about="http://www.onjava.com/pub/a/onjava/excerpt/HardcoreJava_chap06/index2.html">
+    <title>Nested Classes, Part 3</title>
+    <link>http://www.onjava.com/pub/a/onjava/excerpt/HardcoreJava_chap06/index2.html</link>
+    <description>
+    In this third and final installment on nested classes, excerpted from Hardcore Java, author Robert Simmons covers static nested classes, double nested classes, and nested classes in interfaces. 
+   </description>
+    <dc:source>ONJava.com</dc:source>
+    <dc:creator>Robert Simmons, Jr.</dc:creator>
+    <dc:subject>Java</dc:subject>
+    <dc:publisher>O'Reilly Media, Inc.</dc:publisher>
+    <dc:date>2004-05-26</dc:date>
+    <dc:format>text/html</dc:format>
+    <dc:language>en-us</dc:language>
+    <dc:rights>Copyright 2004, O'Reilly Media, Inc.</dc:rights>
+  </item>
+
+
+  <textinput rdf:about="http://meerkat.oreillynet.com/">
+    <title>Search</title>
+    <description>Search Meerkat...</description>
+    <name>s</name>
+    <link>http://meerkat.oreillynet.com/</link>
+  </textinput>
+
+</rdf:RDF>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ Composite.betwixt is part of Forge Project.
+
+ Copyright 2004,2005 LainSoft.org, Demetrio Cruz
+ You may distribute under the terms of either the GNU General Public
+ License or the Artistic License, as specified in the README file.
+-->
+<info primitiveTypes="element">
+<element name="Composite">
+   <element name="command-classname" property="members"/>
+   <addDefaults/>
+</element>
+</info>

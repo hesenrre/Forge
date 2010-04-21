@@ -1,0 +1,15 @@
+/**
+ * CommandException.java is part of Forge Project.
+ *
+ * Copyright 2004,2005 LainSoft Foundation, Demetrio Cruz
+ *
+ * You may distribute under the terms of either the GNU General Public
+ * License or the Artistic License, as specified in the README file.
+ *
+*/
+package org.lainsoft.forge.flow.nav;
+
+public class CommandException
+    extends Exception{
+    
+}

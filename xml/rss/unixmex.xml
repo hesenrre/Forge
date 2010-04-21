@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN"
+ "http://my.netscape.com/publish/formats/rss-0.91.dtd">
+
+<rss version="0.91">
+
+<channel>
+<title>UNIXMEXICO</title>
+<link>http://www.unixmexico.org</link>
+<description>UNIXMEXICO</description>
+<language>es_ES</language>
+
+<item>
+<title>Prohíben los ModChips en Inglaterra...</title>
+<link>http://www.unixmexico.org/modules.php?name=News&amp;file=article&amp;sid=1244</link>
+</item>
+
+<item>
+<title>Grupo Linux Colima te saluda e invita.</title>
+<link>http://www.unixmexico.org/modules.php?name=News&amp;file=article&amp;sid=1243</link>
+</item>
+
+<item>
+<title>Un tip muy simple, pero efectivo</title>
+<link>http://www.unixmexico.org/modules.php?name=News&amp;file=article&amp;sid=1242</link>
+</item>
+
+<item>
+<title>Tiendas virtuales basadas en Litecommerce ,vulnerables</title>
+<link>http://www.unixmexico.org/modules.php?name=News&amp;file=article&amp;sid=1241</link>
+</item>
+
+<item>
+<title>JABBERLOMBIA: Servidor de Jabber desde Colombia</title>
+<link>http://www.unixmexico.org/modules.php?name=News&amp;file=article&amp;sid=1240</link>
+</item>
+
+<item>
+<title>Grupo de Usuarios de Software Libre de Oaxaca</title>
+<link>http://www.unixmexico.org/modules.php?name=News&amp;file=article&amp;sid=1239</link>
+</item>
+
+<item>
+<title>Usoli.org de regreso</title>
+<link>http://www.unixmexico.org/modules.php?name=News&amp;file=article&amp;sid=1238</link>
+</item>
+
+<item>
+<title>ZonaGNU software GNU comentado</title>
+<link>http://www.unixmexico.org/modules.php?name=News&amp;file=article&amp;sid=1237</link>
+</item>
+
+<item>
+<title>I-cafe soffware de gestion de cybercafes ,vulnerable</title>
+<link>http://www.unixmexico.org/modules.php?name=News&amp;file=article&amp;sid=1236</link>
+</item>
+
+<item>
+<title>NUEVO SITIO LINUXREAL / PRESENTACION DE UM TOPIC</title>
+<link>http://www.unixmexico.org/modules.php?name=News&amp;file=article&amp;sid=1235</link>
+</item>
+
+</channel>
+</rss>

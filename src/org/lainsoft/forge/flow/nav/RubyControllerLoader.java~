@@ -1,0 +1,87 @@
+/**
+ * RubyControllerLoader.java is part of Forge Project.
+ *
+ * Copyright 2004,2005,2006,2007 LainSoft Foundation, Demetrio Cruz
+ *
+ * You may distribute under the terms of either the GNU General Public
+ * License or the Artistic License, as specified in the README file.
+ *
+*/
+package org.lainsoft.forge.flow.nav;
+import org.lainsoft.forge.flow.helper.ViewHelper;
+import org.apache.bsf.BSFManager;
+import org.apache.bsf.BSFException;
+import org.apache.bsf.util.IOUtils;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.jruby.exceptions.RaiseException;
+
+
+public class RubyControllerLoader
+    extends GenericAction{
+    
+    private static Log log = LogFactory.getLog(RubyControllerLoader.class);
+
+    private static BSFManager manager;
+    private static String _FRVM="FRVM";
+    
+    private static BSFManager 
+    manager(ViewHelper helper)
+        throws BSFException{
+        if (manager == null){
+            BSFManager.registerScriptingEngine("ruby", "org.jruby.javasupport.bsf.JRubyEngine", new String[] { "rb" });            
+            manager = new BSFManager();
+            try{
+                manager.eval("ruby", _FRVM, -1, -1, "load '"+helper.real_path("/WEB-INF/rlibs/base_controller.rb")+"'");
+            }catch(Exception e){
+                e.printStackTrace();
+            }
+        }
+        return manager;
+    }
+    
+    public String
+    execute()
+        throws CommandException{
+        log.debug("BEFORE USING STIMULUS>"+(String)request("_stimulus"));
+        String stimulus = (helper().is_empty(stimulus = (String)request("_stimulus")) ? "" : stimulus.startsWith("/")? stimulus.substring(1) : stimulus ).split("/")[0];
+        log.debug("USING STIMULUS>"+stimulus);
+        
+        try{
+            System.out.println("befor eval");
+
+            manager(helper()).eval("ruby", _FRVM, -1, -1, getFileContents(helper().real_path("/WEB-INF/rclasses/"+stimulus+"_controller.rb")));
+            System.out.println("After Eval");
+
+            return ((Command)manager(helper()).eval("ruby", _FRVM, -1, -1, "eval(\"#{camelize(\""+stimulus+"\")}Controller.new\")")).execute(helper());
+        }catch(BSFException bsfe){
+            System.out.println("Exception !!!! >"+bsfe.getMessage());
+            System.out.println("TE >>>>"+bsfe.getTargetException());
+            bsfe.printStackTrace();
+            throw new CommandException(bsfe);
+        }catch(FileNotFoundException fnfe){            
+            return ":missing_controller => <h1>unknown Controller</h1>\nNo controller responded to "+stimulus;
+        }catch(IOException ioe){
+            System.out.println("IOException Thrown");
+            ioe.printStackTrace();
+            throw new CommandException(ioe);
+        }catch(RaiseException e){            
+            System.out.println("inner>"+e.getException());
+            e.getException().printBacktrace(System.out);
+            throw new CommandException(e.getException().toString());
+        }
+        //return "Testing with Ruby";
+    }        
+
+    private static String 
+    getFileContents(String filename) 
+        throws FileNotFoundException, IOException {
+        FileReader in = new FileReader(filename);
+        String script = IOUtils.getStringFromReader(in);
+        return script;
+    }
+    
+}

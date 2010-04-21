@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN"
+ "http://my.netscape.com/publish/formats/rss-0.91.dtd">
+
+<rss version="0.91">
+
+<channel>
+<title>La Cofradía Digital</title>
+<link>http://cofradia.org</link>
+<description>La Cofradia Digital</description>
+<language>en-us</language>
+
+<item>
+<title>Se aprueba la especificación 802.11i</title>
+<link>http://cofradia.org/modules.php?name=News&amp;file=article&amp;sid=9938</link>
+</item>
+
+<item>
+<title>Python aplicado a lenguaje natural</title>
+<link>http://cofradia.org/modules.php?name=News&amp;file=article&amp;sid=9937</link>
+</item>
+
+<item>
+<title>Invitacion al JBoss Community</title>
+<link>http://cofradia.org/modules.php?name=News&amp;file=article&amp;sid=9936</link>
+</item>
+
+<item>
+<title>Listo GAIM 0.79</title>
+<link>http://cofradia.org/modules.php?name=News&amp;file=article&amp;sid=9935</link>
+</item>
+
+<item>
+<title>Tecnologia en Robots Humanoides</title>
+<link>http://cofradia.org/modules.php?name=News&amp;file=article&amp;sid=9934</link>
+</item>
+
+<item>
+<title>Usuario de IE dejen de navegar en la red !!!</title>
+<link>http://cofradia.org/modules.php?name=News&amp;file=article&amp;sid=9933</link>
+</item>
+
+<item>
+<title>Murió el creador del código ASCII</title>
+<link>http://cofradia.org/modules.php?name=News&amp;file=article&amp;sid=9932</link>
+</item>
+
+<item>
+<title>Cómo elaborar una subrutina de este script en perl?</title>
+<link>http://cofradia.org/modules.php?name=News&amp;file=article&amp;sid=9931</link>
+</item>
+
+<item>
+<title>Otro de tantos sitios hackeados</title>
+<link>http://cofradia.org/modules.php?name=News&amp;file=article&amp;sid=9930</link>
+</item>
+
+<item>
+<title>A High-Resolution wall display built on the Java platform</title>
+<link>http://cofradia.org/modules.php?name=News&amp;file=article&amp;sid=9929</link>
+</item>
+
+</channel>
+</rss>

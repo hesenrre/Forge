@@ -1,0 +1,133 @@
+/**
+ * Select_Tag.java is part of Forge Project.
+ *
+ * Copyright 2004,2006 LainSoft Foundation, Israel Buitron
+ *
+ * You may distribute under the terms of either the GNU General Public
+ * License or the Artistic License, as specified in the README file.
+ *
+ */
+package org.lainsoft.forge.view.form;
+
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.jsp.JspWriter;
+import javax.servlet.jsp.tagext.BodyTagSupport;
+import org.lainsoft.commons.beanutils.ValidatedBean;
+
+/**
+ * TagLibrary represeting an input text area.
+ *
+ * @jsp.tag  name="text_area_tag"
+ *           body-content="JSP"
+ *           description="Input text area tag"
+ */
+public class Text_Area_Tag 
+    extends BodyTagSupport{
+
+    private int cols;
+    private int rows;
+    private String readonly;
+
+    /** 
+     * Sets <code>readonly</code> tag attribute.
+     * @param readonly New <i>readonly</i> attribute value.
+     */
+    public void
+    setReadonly(String readonly) {
+	boolean ro = (new Boolean(readonly)).booleanValue();
+	this.readonly = !ro ? "" : Boolean.toString(ro);
+    }
+
+    /**
+     * Gets <code>readonly</code> tag attribute.
+     * @return <code>readonly</code> tag attribute value.
+     * @jsp.attribute  required="false"
+     *              rtexprvalue="true"
+     */
+    public String
+    getReadonly() {
+	return readonly;
+    }
+
+    
+    public void 
+    setCols(int cols){
+        this.cols = cols;
+    }
+
+    /**
+     * @jsp.attribute  required="false"
+     *              rtexprvalue="true"
+     */
+    public int
+    getCols(){
+        return cols;
+    }
+    
+    
+    public void
+    setRows(int rows){
+        this.rows = rows;
+    }
+
+    /**
+     * @jsp.attribute  required="false"
+     *              rtexprvalue="true"
+     */
+    public int
+    getRows(){
+        return rows;
+    }
+
+
+    /**
+     * Gets all attributes and their values.
+     * If one attribute is not valued (null ore empty) it is not 
+     * included in the list.
+     * @return <code>String</code> with all valued attributes.
+     */
+    // public String getModifiers() {
+// 	return super.getModifiers() +
+// 	    (isEmpty(readonly)  ? "" : "readonly ");
+// 	    //(isEmpty(maxlength) ? "" : "maxlength=\'" + maxlength + "\' ");
+//     }
+
+
+    public int
+    doStartTag(){
+        try{
+            JspWriter out = pageContext.getOut();
+            out.println("<textarea>");
+        } catch(IOException ioe){
+            ioe.printStackTrace();
+        }
+        return EVAL_BODY_BUFFERED;
+    }
+
+
+    public int
+    doAfterBody(){
+        try{
+            JspWriter out = getBodyContent().getEnclosingWriter();
+            out.write(getBodyContent().getString());
+        } catch(IOException ioe){
+            ioe.printStackTrace();
+        }
+        return SKIP_BODY;
+    }
+
+    public int
+    doEndTag() {
+        try{
+            JspWriter out = pageContext.getOut();
+            out.println("</textarea>");
+        } catch(IOException ioe){
+            ioe.printStackTrace();
+        }
+        return EVAL_PAGE;
+    }
+    
+
+}

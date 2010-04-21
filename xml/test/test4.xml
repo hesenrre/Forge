@@ -1,0 +1,26 @@
+<?xml version='1.0' ?>  <portlet:configurations>
+    <portlet:configuration>
+      <align>0</align>
+      <desc>desc1</desc>
+      <is_enable>true</is_enable>
+      <level>0</level>
+      <name>test1</name>
+      <uri>http://test1</uri>
+    </portlet:configuration>
+    <portlet:configuration>
+      <align>1</align>
+      <desc>desc2</desc>
+      <is_enable>true</is_enable>
+      <level>1</level>
+      <name>test2</name>
+      <uri>http://test2</uri>
+    </portlet:configuration>
+    <portlet:configuration>
+      <align>2</align>
+      <desc>desc3</desc>
+      <is_enable>true</is_enable>
+      <level>2</level>
+      <name>test3</name>
+      <uri>http://test3</uri>
+    </portlet:configuration>
+  </portlet:configurations>

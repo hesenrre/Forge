@@ -1,0 +1,200 @@
+/**
+ * GenericFlowController.java is part of Forge Project.
+ *
+ * Copyright 2004,2005 LainSoft Foundation, Demetrio Cruz
+ *
+ * You may distribute under the terms of either the GNU General Public
+ * License or the Artistic License, as specified in the README file.
+ *
+*/
+package org.lainsoft.forge.flow.control;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Map;
+import java.util.TreeMap;
+import javax.servlet.ServletException;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.lainsoft.forge.flow.helper.ViewHelper;
+import org.lainsoft.forge.flow.helper.GenericViewHelper;
+import org.lainsoft.forge.flow.nav.Command;
+import org.lainsoft.forge.flow.nav.CommandException;
+import org.lainsoft.forge.flow.nav.CommandFactory;
+import org.lainsoft.forge.flow.nav.GenericCommandFactory;
+
+
+/**
+ * Generic implementation of a Flow Control, transforms URL paths into stimulus 
+ * that a command factory can understand.
+ *
+ * @web.servlet name="GenericFlowController"
+ * 
+ * @web.servlet-mapping url-pattern="/flow/"
+ *
+ */
+public class GenericFlowController
+    extends HttpServlet
+    implements FlowController{
+
+    /**
+     * Receives standard HTTP requests from the public <code>service</code> method and 
+     * dispatches them to the <code>do</code>XXX methods defined in this class. 
+     * This method is an HTTP-specific version of the 
+     * <code>Servlet.service(javax.servlet.ServletRequest, 
+     * javax.servlet.ServletResponse)</code> 
+     * method. There's no need to override this method.
+     *
+     * @param request the <code>HttpServletRequest</code> object that contains the 
+     * request the client made of the servlet.
+     * @param response the <code>HttpServletResponse</code> object that contains the
+     * response the servlet returns to the client.
+     * @throws IOException if an input or output error occurs while the servlet is
+     * handling the HTTP request.
+     * @throws ServletException if the HTTP request cannot be handled.
+     */
+    public void
+    service (HttpServletRequest request, HttpServletResponse response)
+        throws IOException, ServletException{
+        System.out.println("In GFC service>");
+        GenericViewHelper helper = new GenericViewHelper(request, response, getServletContext());
+        try{
+            flow(processRequest(helper), helper);
+        }catch(CommandException ce){
+            throw new ServletException(ce);
+        }
+    }
+
+    
+    private String
+    getStimulus (ViewHelper helper){
+        String stimulus = 
+            ((stimulus = helper.getRequest().getPathInfo()) == null 
+             ? (stimulus = helper.getRequest().getServletPath ()) == null 
+             ? "" : stimulus 
+             : stimulus).length() > 1
+            ? stimulus.substring(1)
+            : stimulus;
+        return stimulus;
+    }
+
+    
+    public Map
+    processRequest (ViewHelper helper)
+        throws CommandException{
+        Map flow_response = new TreeMap();        
+
+        String prefix = 
+            (prefix = helper.getApplicationContext().getInitParameter("command_path_prefix")) == null
+            ? "" : prefix.trim();
+        
+        String stimulus = getStimulus(helper);
+        helper.getRequest().setAttribute("_stimulus",stimulus);        
+        System.out.println("Forge>Stimulus>"+stimulus);
+        String intended_response = "";
+        
+        intended_response = GenericCommandFactory.newInstance().getCommand(prefix+stimulus,helper).execute(helper);
+        
+        
+        System.out.println("intended_response>"+intended_response);
+                
+        
+        if (intended_response == null || intended_response.trim().equals("")){
+            flow_response.put("template","/"+stimulus+".jsp");
+        }else{
+            String []deteminants = intended_response.split("[\\s]{0,}=>[\\s]{0,}");            
+            if (deteminants.length < 2 || deteminants[0].startsWith(":text")){
+                flow_response.put("text",deteminants.length == 2 ? deteminants[1]: deteminants[0]);
+            }else if (deteminants[0].startsWith(":partial")){
+                String partial = ((partial = deteminants[1]).lastIndexOf("/") >= 0 ?
+                              partial.substring(0,partial.lastIndexOf("/"))+"/_"+partial.substring(partial.lastIndexOf("/")+1) 
+                                  : "_"+partial)+".jsp";
+                System.out.println("partial before>"+partial);
+
+                partial = "/" + (partial.lastIndexOf("/") >= 0 ? partial : stimulus.lastIndexOf("/") > 0 ? stimulus.substring(0,stimulus.lastIndexOf("/")+1) + partial : partial);
+                flow_response.put("partial",partial);
+            }else if (deteminants[0].startsWith(":template")){
+                String template = "/"+ ((template = deteminants[1]).lastIndexOf("/") >= 0 ? template : stimulus.lastIndexOf("/") > 0 ? stimulus.substring(0,stimulus.lastIndexOf("/")+1) + template : template) +".jsp";
+                flow_response.put("template",template);
+            }else if (deteminants[0].startsWith(":action")){                
+                String action = "/"+ ((action = deteminants[1]).lastIndexOf("/") >= 0 ? action : stimulus.lastIndexOf("/") > 0 ? stimulus.substring(0,stimulus.lastIndexOf("/")+1) + action : action);
+                String gfs_alias_path = (gfs_alias_path = helper.getRequest().getServletPath()) == null ? "/": gfs_alias_path;
+                flow_response.put("action",gfs_alias_path+action);
+            }
+        }
+        return flow_response;
+    }
+                
+    
+    public boolean
+    exists_layout(String response_path){
+        
+        
+    }
+    
+
+    private void
+    flow(Map flow_response, ViewHelper helper)
+        throws ServletException, IOException{
+        
+        if (flow_response.containsKey("template")){
+            forward(flow_response.get("template").toString(),helper);            
+        }else if (flow_response.containsKey("missing")){
+            String msg = "<h1>Template is missing</h1>\n";
+            msg += "<p>Missing template "+flow_response.get("missing")+"</p>";
+            render_text(helper.getResponse(), msg);
+        }else if (flow_response.containsKey("text")){
+            render_text(helper.getResponse(), flow_response.get("text").toString());
+        }else if (flow_response.containsKey("partial")){
+            forward(flow_response.get("partial").toString(), helper);
+        }else if (flow_response.containsKey("template")){
+            forward(flow_response.get("template").toString(), helper);
+        }else if (flow_response.containsKey("action")){
+            straigth_forward(flow_response.get("action").toString(), helper);
+        }
+        
+        
+    }
+
+    private void
+    straigth_forward(String target, ViewHelper helper)
+        throws ServletException, IOException{
+        System.out.println("forwarding to>"+target);
+        helper.getRequest().getRequestDispatcher(target).forward(helper.getRequest(),helper.getResponse());
+    }
+
+    private void
+    forward (String target, ViewHelper helper)
+        throws ServletException,IOException{
+        System.out.println("forwarding to>"+target);
+        System.out.println(helper.real_path(target));
+
+        if (exists(helper.real_path(target))){
+            helper.getRequest().getRequestDispatcher(target).forward(helper.getRequest(),helper.getResponse());
+        }else{
+            Map flow_response = new TreeMap();
+            flow_response.put("missing",target);
+            flow(flow_response, helper);
+        }
+    }
+
+    private void
+    render_text(HttpServletResponse response, String text)
+        throws IOException{
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        out.println(text);
+        out.close();
+    }
+
+    
+    private boolean
+    exists(String filename){
+        return new File(filename).exists();
+    }
+    
+}

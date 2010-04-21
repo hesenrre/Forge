@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<rss:configuration>
+    <rssconfig>
+        <name>slashdot.org</name>
+        <description>/. News for nerds, Stuff that matters.</description>
+        <uri>http://slashdot.org/index.rss</uri>
+        <timeout>1860000</timeout>
+        <classname>org.lainsoft.rss.RSSDocumentv1_0</classname>
+    </rssconfig>
+    <rssconfig>
+        <name>Onjava.com</name>
+        <description>The independent source for entreprice java</description>
+        <uri>http://www.oreillynet.com/meerkat/?_fl=rss10&amp;t=ALL&amp;c=5136</uri>
+        <timeout>1860000</timeout>
+        <classname>org.lainsoft.rss.RSSDocumentv1_0</classname>
+    </rssconfig>
+    <rssconfig>
+        <name>Cofradia.org</name>
+        <description>La Cofradia Digital: Donde el Software Libre se une</description>
+        <uri>http://www.cofradia.org/backend.php</uri>
+        <timeout>1860000</timeout>
+        <classname>org.lainsoft.rss.RSSDocumentv0_91</classname>
+    </rssconfig>
+    <!--rssconfig>
+        <name>Bulma.net</name>
+        <description>Bisoños Usuarios de GNU/Linux de Mallorca y Alrededores</description>
+        <uri>http://bulma.net/xml.php</uri>
+        <timeout>2100</timeout>
+        <classname>org.lainsoft.rss.RSSDocumentv0_91</classname>
+    </rssconfig-->
+</rss:configuration>
