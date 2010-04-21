@@ -19,6 +19,8 @@ commons-logging    ver >= 1.0.4
 xdoclet            ver >= 1.2.2
 servlet-api        ver >= 2.4
 jsp-api            ver >= 2.0
+commons-fileupload ver >= 1.2.1
+bsf                ver >= 2.4.0
 
 
 Compiling

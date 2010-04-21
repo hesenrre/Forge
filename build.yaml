@@ -1,0 +1,11 @@
+artifacts: 
+  beanutils: commons-beanutils:commons-beanutils:jar:1.7.0
+  collections: commons-collections:commons-collections:jar:3.2.1
+  betwixt: commons-betwixt:commons-betwixt:jar:0.6
+  digester: commons-digester:commons-digester:jar:1.6
+  logging: commons-logging:commons-logging:jar:1.0.4
+  fileupload: commons-fileupload:commons-fileupload:jar:1.2.1
+  xdoclet: xdoclet:xdoclet:jar:1.2.3
+  servlet: servletapi:servlet-api:jar:2.4
+  jsp: jspapi:jsp-api:jar:2.0
+  bsf: bsf:bsf:jar:2.4.0 

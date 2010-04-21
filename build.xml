@@ -37,6 +37,8 @@
        <exclude name="COPYING" />
        <exclude name="Install" />
        <exclude name="Artistic" />
+       <exlcude name="build.yaml"/>
+       <exlcude name="buildfile"/>
        <include name="**/*" />
       </fileset>
     </delete>
