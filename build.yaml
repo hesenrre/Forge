@@ -9,3 +9,5 @@ artifacts:
   servlet: servletapi:servlet-api:jar:2.4
   jsp: jspapi:jsp-api:jar:2.0
   bsf: bsf:bsf:jar:2.4.0 
+  lainsoftcommons: org.lainsoft:commons:jar:1.0.0
+  jruby: jruby:jruby:jar:1.1.4
