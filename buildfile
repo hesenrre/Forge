@@ -6,9 +6,10 @@ GROUP = "org.lainsoft.forge"
 COPYRIGHT = "Demetrio Cruz"
 
 # Specify Maven 2.0 remote repositories here, like this:
-repositories.remote << "http://www.ibiblio.org/maven2/"
+repositories.remote << 'http://www.ibiblio.org/maven2/'
 repositories.remote << 'http://www.mvnsearch.org/maven2/'
-repositories.remote << "http://jwm.dnsalias.com:8081/nexus/content/repositories/thirdparty/"
+repositories.remote << 'http://192.168.10.9:8081/nexus/content/repositories/thirdparty/'
+repositories.remote << 'http://jwm.dnsalias.com:8081/nexus/content/repositories/thirdparty/'
 
 desc "The Forge project"
 define "forge" do
